@@ -1,3 +1,32 @@
+<?php 
+ 
+include 'config.php';
+ 
+error_reporting(0);
+ 
+session_start();
+ 
+if (isset($_SESSION['username'])) {
+    header("Location: database.php");
+}
+ 
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
+ 
+    $sql = "SELECT * FROM users WHERE Username='$Username' AND Password='$Password'";
+    $result = mysqli_query($conn, $sql);
+    if ($result->num_rows > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        header("Location: database.php");
+    } else {
+        echo "alert('Email atau password Anda salah. Silahkan coba lagi!')";
+    }
+}
+ 
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,11 +48,13 @@
     <meta name="theme-color" content="#712cf9">
   </head>
   <body class="text-center">
+  <div class="alert alert-warning" role="alert">
+        <?php echo $_SESSION['error']?>
+    </div>
     <main class="form-signin w-100 m-auto">
       <form>
         <img class="mb-4" src="img/logo.png" alt="" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">Admin Room</h1>
-        <form action="action-login.php" method="post"></form>
         <div class="form-floating">
           <input type="text" class="form-control" id="floatingInput" placeholder="username">
           <label for="floatingInput">Username</label>
