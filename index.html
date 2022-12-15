@@ -1,150 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Exile Hotel V2</title>
+  </head>
+  <body>
+    <!-- HEADER --> 
+    <div class="container">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <img src="img/logo.png">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+  
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Kamar</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Fasilitas</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Fitur</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Tentang Kami</a></li>
+        </ul>
+  
+        <div class="col-md-3 text-end">
+          <button type="button" class="btn btn-outline-primary me-2">Login</button>
+          <button type="button" class="btn btn-primary">Sign-up</button>
+        </div>
+      </header>
+    </div>  
+      <!-- HEROES --> 
+      <div class="b-example-divider"></div>
 
-    <title>Exile's Hotel</title>
-    <link rel="shortcut icon" href="img/logo.png">
-
-    <!-- load stylesheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="css/datepicker.css"/>
-    <link rel="stylesheet" href="css/tooplate-style.css">                                   <!-- Templatemo style -->
-
-</head>
-
-    <body>
-        <div class="tm-main-content" id="top">
-            <div class="tm-top-bar-bg"></div>
-            <div class="tm-top-bar" id="tm-top-bar">
-                <!-- Top Navbar -->
-                <div class="container">
-                    <div class="row">
-                        
-                        <nav class="navbar navbar-expand-lg narbar-light">
-                            <a class="navbar-brand mr-auto" href="#">
-                                <img src="img/logo.png" alt="Site logo">
-                                Exile Hotel
-                            </a>
-                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
-                                <ul class="navbar-nav ml-auto">
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-4">Facility</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-5">Room Type</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-6">About Us</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="login.html">Admin<span class="sr-only">(current)</span></a>
-                                  </li>
-                                </ul>
-                            </div>                            
-                        </nav>            
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">Best 5 Star Hotel in Teyvat</h1>
+            <p class="col-lg-10 fs-4">Kami tetap setia dan konsisten dalam menghadirkan esensi layanan berkualitas kepada tamu kami yang berharga dan terus berinovasi. Merangkul Budaya Hormat dan Peduli Sejati, anggota tim kami berkomitmen untuk memenuhi kebutuhan tamu kami sepenuhnya.</p>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-light">
+              <div class="form-floating mb-3">
+                <input type="date" class="form-control" id="floatingInput" placeholder="dd/mm/yyyy">
+                <label for="floatingDate">Check In</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="date" class="form-control" id="floatingPassword" placeholder="dd/mm/yyyy">
+                <label for="floatingDate">Check Out</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingInput" name="points" step="0">
+                <label for="floatingDate">Adult</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingInput" name="points" step="0">
+                <label for="floatingDate">Child</label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Book Now!</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <!-- JUMBUTRON (Pilihan Kamar) -->   
+     <main>
+        <div class="container py-4">
+            <div class="p-5 mb-4 bg-light rounded-3">
+                <h2 class="pb-2 border-bottom">Pilihan Kamar</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="col d-flex align-items-start">
+                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
                     </div>
                 </div>
-            </div>
-            <div class="tm-section tm-bg-img" id="tm-section-1">
-                <div class="tm-bg-white ie-container-width-fix-2">
-                    
-                    <div class="container ie-h-align-center-fix">
-                        <div class="row">
-                            <div class="col-xs-12 ml-auto mr-auto ie-container-width-fix">
-                                <form action="index.html" method="get" class="tm-search-form tm-section-pad-2">
-                                    <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
-                                        <h3 class="tm-margin-b-0">Cek Ketersediaan</h3>
-                                    </div>
-                                    <div class="form-row tm-search-form-row">
-                                        <div class="form-group tm-form-element tm-form-element-50">
-                                            <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
-                                            <input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="Check In">
-                                        </div>
-                                        <div class="form-group tm-form-element tm-form-element-50">
-                                            <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
-                                            <input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="Check Out">
-                                        </div>
-                                    </div>
-                                    <div class="form-row tm-search-form-row">
-                                        <div class="form-group tm-form-element tm-form-element-2">                                            
-                                            <select name="adult" class="form-control tm-select" id="adult">
-                                                <option value="">Dewasa</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                            <i class="fa fa-2x fa-user tm-form-element-icon"></i>
-                                        </div>
-                                        <div class="form-group tm-form-element tm-form-element-2">                                            
-                                            <select name="children" class="form-control tm-select" id="children">
-                                                <option value="">Anak</option>
-                                                <option value="0">0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                            <i class="fa fa-user tm-form-element-icon tm-form-element-icon-small"></i>
-                                        </div>
-                                        <div class="form-group tm-form-element tm-form-element-2">
-                                            <select name="room" class="form-control tm-select" id="room">
-                                                <option value="">Tipe Kamar</option>
-                                                <option value="1">Standard</option>
-                                                <option value="2">Sweet</option>
-                                                <option value="3">Family</option>
-
-                                            </select>
-                                            <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
-                                        </div>
-                                        <div class="form-group tm-form-element tm-form-element-2">
-                                            <button type="submit" class="btn btn-primary tm-btn-search">Cek kamar</button>
-                                        </div>
-                                      </div>
-                                      <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
-                                          <p class="tm-margin-b-0">Untuk mengecek ketersediaan kamar</p>
-                                          <a href="#" class="ie-10-ml-auto ml-auto mt-1 tm-font-semibold tm-color-primary">Bantuan?</a>
-                                      </div>
-                                </form>
-                            </div>                        
-                        </div>      
-                    </div>
-                </div>                  
-            </div>
-            
-            <footer class="tm-bg-dark-blue">
-                <div class="container">
-                    <div class="row">
-                        <p class="col-sm-12 text-center tm-font-light tm-color-white p-4 tm-margin-b-0">
-                        Copyright &copy; <span class="tm-current-year">2022</span> Exile Hotel</p>        
-                    </div>
-                </div>                
-            </footer>
+                </div>  
+                <div class="container-fluid py-5">
+                  <h1 class="display-5 fw-bold">The Grand Million</h1>
+                  <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+                  <button class="btn btn-primary btn-lg" type="button">Pesan Disini</button>
+                </div>
+              </div>
+          
+              <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                  <div class="h-100 p-5 text-bg-dark rounded-3">
+                    <h2>Business Slams</h2>
+                    <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+                    <button class="btn btn-outline-light" type="button">Pesan Disini</button>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>Economy Grade</h2>
+                    <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+                    <button class="btn btn-outline-secondary" type="button">Pesan Disini</button>
+                  </div>
+                </div>
+              </div>
         </div>
-        
-        <!-- load JS files -->
-        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-        <script src="js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
-        <script src="js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
-        <script src="js/datepicker.min.js"></script>                <!-- https://github.com/qodesmith/datepicker -->
-        <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
-        <script src="slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
- 
-	</body>
-</html>
+    </main>
+    <!-- ALBUM -->
+    <div class="b-example-divider"></div>
 
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Fasilitas </h2>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://i.imgur.com/3wdGKl.jpg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Kolam Bebek</h3>
+            </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/12/09/16/9f/the-italian-restaurant.jpg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Italian Restaurant</h3>
+            </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://convention.jiexpo.com/wp-content/uploads/sites/3/2021/01/1.-GRAND-BALLROOM-1-min.jpg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ballroom</h3>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Fitur</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+            </div>
+            <div>
+              <h3 class="fs-2">Top Security 24 Hours</h3>
+              <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+              <a href="#" class="btn btn-primary">
+                Primary button
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+            </div>
+            <div>
+              <h3 class="fs-2">Full Service</h3>
+              <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+              <a href="#" class="btn btn-primary">
+                Primary button
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+            </div>
+            <div>
+              <h3 class="fs-2">Featured title</h3>
+              <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+              <a href="#" class="btn btn-primary">
+                Primary button
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- FOOTERS -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-muted">&copy; 2022 Exile Hotel V2. Templated by Ilham Ripandi</p>
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+          </a>
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Kamar</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Fasilitas</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Fitur</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Tentang Kami</a></li>
+          </ul>
+        </footer>
+    </div>
+  </body>
+</html>
